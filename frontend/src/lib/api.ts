@@ -1,6 +1,7 @@
 // Typed API client — no hardcoded storm data. All values fetched from FastAPI.
+// Same-origin ("") in prod (Render serves UI+API together); localhost in dev.
 export const API_BASE =
-  import.meta.env.VITE_API_BASE_URL ?? "http://127.0.0.1:8000";
+  import.meta.env.VITE_API_BASE_URL ?? (import.meta.env.DEV ? "http://127.0.0.1:8000" : "");
 
 export interface StormSummary {
   sid: string;
