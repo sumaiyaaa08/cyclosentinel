@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #0f172a;
+  --teal: #14b8a6;
+  --coral: #f43f5e;
+}
+
+body {
+  background: var(--navy);
+  color: #f1f5f9;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+}
+
+.leaflet-container {
+  background: #0b1220;
+  border-radius: 0.75rem;
+}
+
+.skeleton {
+  animation: pulse 1.4s ease-in-out infinite;
+  background: #334155;
+  border-radius: 0.5rem;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 0.45; }
+  50% { opacity: 0.9; }
+}
